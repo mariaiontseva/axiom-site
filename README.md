@@ -45,7 +45,6 @@ A hidden `_gotcha` field is a honeypot for bots.
 
 ## Before going live
 
-- Replace the placeholders that render in amber: `[Town]`, `[Company number · registered office]`.
 - The contact block has no name or portrait for now; add them back (the design has a square photo and
   a serif name line) once Chris confirms.
 - Hero photo: "A brick building with windows and a street light" by Alessio Patron on Unsplash
