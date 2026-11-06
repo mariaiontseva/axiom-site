@@ -34,9 +34,10 @@ DNS at the registrar: A records for the apex to 185.199.108.153 / .109.153 / .11
 
 The form validates on the client (name required, email must contain "@") and then:
 
-- **with `data-endpoint`** set on `<form id="enquiry">` (Formspree, Basin, a serverless function…) it POSTs
-  the fields as `FormData` with `Accept: application/json` and shows "Thank you. We reply within one working
-  day." on a 2xx response, or an error line with the email address on failure;
+- **with `data-endpoint`** (now `https://axiom-forms.vercel.app/api/enquiry`, a Vercel Function in the
+  `axiom-forms` project that emails the enquiry through Resend to info@) it POSTs the fields as `FormData` with
+  `Accept: application/json` and shows "Thank you. We reply within one working day." on a 2xx response, or an
+  error line on failure;
 - **without `data-endpoint`** it opens the visitor's mail client with a prefilled message to the address in
   `data-mailto` and shows the same thank-you line. `data-mailto` is `info@axiomestatemanagement.co.uk`; that mailbox must exist (email hosting is
   separate from the domain) or enquiries will bounce.
